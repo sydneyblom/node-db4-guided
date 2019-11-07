@@ -28,12 +28,6 @@ exports.up = function(knex) {
         tbl.string("address", 255);
 
         //define foreign key
-        tbl.integer("serial")
-        .unsigned()
-        .references('id')
-        .inTable('zoo');
-        .onUpdate('Restrict')//about changesin the value of the primary key
-        .onUpdate('CASCADE')//about changing the value of the primary key table
       })
 
 
